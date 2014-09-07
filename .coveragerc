@@ -1,0 +1,2 @@
+[report]
+omit = *google_appengine*,*test*,*site-packages*
