@@ -1,1 +1,1 @@
-google_appengine/appcfg.py update .
+appcfg.py update .

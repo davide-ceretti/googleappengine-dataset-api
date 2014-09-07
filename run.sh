@@ -1,1 +1,1 @@
-google_appengine/dev_appserver.py .
+dev_appserver.py .

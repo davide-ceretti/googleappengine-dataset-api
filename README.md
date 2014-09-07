@@ -14,26 +14,14 @@ Install
 -------
 
 ```
+# Install the Google App Engine Python SDK somewhere
+wget https://storage.googleapis.com/appengine-sdks/featured/google_appengine_1.9.10.zip
+unzip google_appengine_1.9.10.zip
+rm google_appengine_1.9.10.zip
+export PATH=$PATH:<path-to-google_appengine>
+
+# Clone this repo
 git clone git@github.com:davide-ceretti/googleappengine-dataset-api.git
-./install.sh # It will download and extract Google App Engine Python SDK
-```
-
-Load data
----------
-
-```
-# In your Google App Engine console
-from scripts import load_from_dataset; load_from_dataset()
-```
-
-Tests
------
-
-```
-# In your activated virtualenv
-pip install test_requirements.txt
-run_tests.sh
-coverage report
 ```
 
 Run server
@@ -43,3 +31,22 @@ Run server
 ./run.sh
 # Open your browser at http://localhost:8080/
 ```
+
+Load data
+---------
+
+```
+# In your Google App Engine console (http://localhost:8000/console)
+from scripts import load_from_dataset; load_from_dataset()
+```
+
+Tests
+-----
+
+```
+# In your activated virtualenv
+pip install test_requirements.txt
+coverage run test.py <path-to-google_appengine> tests
+coverage report
+```
+
